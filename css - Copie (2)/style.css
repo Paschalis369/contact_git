@@ -1,0 +1,622 @@
+/* style.css avec animation */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background-color: #004d99;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.logo {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  color: #ffcc00;
+}
+
+.banniere img {
+  width: 100%;
+  height: auto;
+  animation: zoomIn 1s ease;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.presentation, .equipe, .video, .audio, .liste-equipe, .contact {
+  padding: 20px;
+  background-color: white;
+  margin: 20px auto;
+  max-width: 1000px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.membre {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.membre:hover {
+  transform: scale(1.03);
+}
+
+.membre img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+footer {
+  background-color: #004d99;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: #004d99;
+  outline: none;
+}
+
+button {
+  background-color: #004d99;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #003366;
+}
+
+video, audio {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ===== Carrousel personnalisé ===== */
+
+#carouselExampleRide {
+  width: 50%;
+  margin: auto;
+}
+
+.other .carousel-item img {
+  width: 700px;
+  height: 569px;
+  filter: brightness(70%);
+  object-fit: cover;
+  border-bottom: 4px solid #ffc107; /* Bordure jaune Bootstrap */
+}
+
+.carousel-caption {
+  bottom: 20%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 1rem;
+  padding: 20px;
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-caption h1 {
+  border-bottom: 3px solid #ffc107;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.cta-button,
+.btn-warning {
+  font-weight: bold;
+  border-radius: 50px;
+  padding: 10px 25px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover,
+.btn-warning:hover {
+  border: 2px solid white;
+  background-color: #e6c200;
+  color: #000;
+}
+
+/* === Bannière Cockpit === */
+.carousel-caption.cockpit-style {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-left: 4px solid #00ffcc;
+  border-radius: 10px;
+  padding: 20px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.4);
+  color: #e0f7fa;
+}
+
+.carousel-caption.cockpit-style h1 {
+  font-size: 2.5rem;
+  border-bottom: 3px solid #00ffcc;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.cta-cockpit {
+  background-color: #00ffcc;
+  color: #000;
+  border-radius: 30px;
+  padding: 10px 25px;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(0, 255, 204, 0.3);
+}
+
+.cta-cockpit:hover {
+  background-color: #00ccaa;
+  color: #000;
+  border: 2px solid white;
+  box-shadow: 0 0 20px #00ffcc;
+}
+
+@keyframes cockpitGlow {
+  0%, 100% { box-shadow: 0 0 15px rgba(0, 255, 204, 0.4); }
+  50% { box-shadow: 0 0 25px rgba(0, 255, 204, 0.8); }
+}
+
+.carousel-caption.cockpit-style {
+  animation: cockpitGlow 4s ease-in-out infinite;
+}
+
+/* === Bannière Turbine === */
+.carousel-caption.turbine-style {
+  background: radial-gradient(circle, rgba(255,255,255,0.1), rgba(0,0,0,0.7));
+  border: 2px solid #cccccc;
+  border-radius: 10px;
+  padding: 20px;
+  color: #f1f1f1;
+  text-shadow: 1px 1px 5px black;
+  animation: flicker 2s infinite;
+}
+
+.carousel-caption.turbine-style h2 {
+  font-size: 2.2rem;
+  border-bottom: 2px solid #cccccc;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.cta-turbine {
+  background: linear-gradient(145deg, #666, #222);
+  color: #fff;
+  border-radius: 30px;
+  padding: 10px 25px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.cta-turbine:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #aaa;
+  background: linear-gradient(145deg, #888, #333);
+}
+
+/* Effet subtil de vibration pour rappeler la mécanique */
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.95; transform: scale(1.005); }
+}
+
+/* Effet de rebond pour les images de basketball */
+@keyframes bounceIn {
+  0% { transform: scale(0.9); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Appliquer l'animation aux images du carrousel basketball */
+.carousel-item img[src*="basket"] {
+  animation: bounceIn 1s ease-in-out;
+}
+
+.carousel-item:hover img {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* === Bannière Basketball === */
+.carousel-caption.basketball-style {
+  background-color: rgba(0, 0, 0, 0.6); /* Fond sombre pour le thème basket */
+  border-radius: 1rem;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.carousel-caption.basketball-style h1 {
+  font-size: 2.5rem;
+  border-bottom: 3px solid #ff6600; /* Orange vif pour rappeler le sport */
+  padding-bottom: 10px;
+}
+
+.cta-basketball {
+  background-color: #ff6600; /* Orange pour le basket */
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 12px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-basketball:hover {
+  background-color: #e65c00;
+  color: #fff;
+  border: 2px solid white;
+  box-shadow: 0 0 20px #ff6600;
+}
+
+/* === Ajouter l'icône du panier === */
+.cta-basketball i {
+  margin-left: 10px;  /* Espacement entre le texte et l'icône */
+  font-size: 1.2em;   /* Taille de l'icône */
+}
+
+@keyframes basketFadeZoom {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.95; transform: scale(1.02); }
+}
+
+.carousel-caption.evolution-style {
+  animation: basketFadeZoom 4s ease-in-out infinite;
+}
+
+/* === Bannière Les Légendes du Basket === */
+.carousel-caption.legendes-style {
+  background-color: rgba(0, 0, 0, 0.7); /* Fond sombre avec un effet plus marqué */
+  border-radius: 1rem;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.carousel-caption.legendes-style h1 {
+  font-size: 2.5rem;
+  border-bottom: 3px solid #ff0000; /* Rouge pour la passion et l'énergie du basket */
+  padding-bottom: 10px;
+  color: #fff;
+}
+
+.cta-legendes {
+  background-color: #0066cc; /* Bleu pour l'aspect dynamique du basket */
+  color: #fff;  /* Texte blanc */
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 12px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border: 2px solid #ff0000; /* Bordure rouge pour ajouter du contraste */
+}
+
+.cta-legendes:hover {
+  background-color: #ff3333; /* Changement de couleur au survol pour du rouge vif */
+  color: #fff;
+  border: 2px solid #0066cc; /* Bordure bleue lors du survol */
+  box-shadow: 0 0 20px #ff0000; /* Ombre rouge pour l'effet visuel */
+}
+
+/* === Ajouter l'icône du ballon de basket === */
+.cta-legendes i {
+  margin-left: 10px;  /* Espacement entre le texte et l'icône */
+  font-size: 1.2em;   /* Taille de l'icône */
+}
+
+@keyframes dunkBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.carousel-caption.dunk-style {
+  animation: dunkBounce 2.5s ease-in-out infinite;
+}
+
+/* === Bannière Les grandes équipes du Basket === */
+
+.carousel-caption.teams-style {
+  background-color: rgba(60, 60, 60, 0.4); /* gris foncé transparent */
+  border: 1px solid rgba(200, 200, 200, 0.2);
+  border-radius: 16px;
+  padding: 20px;
+  color: #e0e0e0; /* gris clair pour contraste */
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-caption.teams-style h1 {
+  font-size: 2.3rem;
+  margin-bottom: 12px;
+  color: #d8c4f4; /* violet pâle pour une touche douce */
+  border-bottom: 2px solid rgba(216, 196, 244, 0.5);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.cta-teams {
+  background-color: rgba(216, 196, 244, 0.9); /* violet pâle opaque */
+  color: #333;
+  border-radius: 25px;
+  padding: 10px 25px;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(216, 196, 244, 0.3);
+}
+
+.cta-teams:hover {
+  background-color: #bfa5e0; /* violet plus foncé au hover */
+  color: #111;
+  border: 1px solid #fff;
+}
+
+@keyframes teamGlow {
+  0%, 100% { background-color: rgba(80, 60, 110, 0.5); }
+  50% { background-color: rgba(80, 60, 110, 0.7); }
+}
+
+.carousel-caption.teams-style {
+  animation: teamGlow 4s ease-in-out infinite;
+}
+
+
+/* === Bannière Relativité générale === */
+.carousel-caption.relativite-style {
+  background: rgba(25, 25, 112, 0.6); /* Bleu nuit transparent */
+  border-left: 4px solid #ffa500; /* Orange doré */
+  border-radius: 12px;
+  padding: 20px;
+  backdrop-filter: blur(4px);
+  color: #f0f8ff;
+  text-shadow: 1px 1px 4px black;
+}
+
+.cta-relativite {
+  background-color: #ffa500;
+  color: #000;
+  border-radius: 30px;
+  padding: 10px 25px;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(255, 165, 0, 0.4);
+}
+
+.cta-relativite:hover {
+  background-color: #ffcc33;
+  color: #000;
+  border: 2px solid white;
+  box-shadow: 0 0 20px #ffa500;
+}
+
+@keyframes gravityWave {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.015); }
+}
+
+.carousel-caption.relativite-style {
+  animation: gravityWave 4s ease-in-out infinite;
+}
+
+/* === Bannière Boson de Higgs === */
+.carousel-caption.higgs-style {
+  background: rgba(0, 0, 128, 0.65); /* Bleu cobalt transparent */
+  border: 3px solid gold;
+  border-radius: 12px;
+  padding: 20px;
+  backdrop-filter: blur(5px);
+  color: #fff8dc;
+  text-shadow: 1px 1px 6px #000;
+}
+
+.cta-higgs {
+  background: linear-gradient(135deg, gold, #ffd700);
+  color: #000;
+  border-radius: 30px;
+  padding: 10px 25px;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.5);
+}
+
+.cta-higgs:hover {
+  background: #ffec8b;
+  box-shadow: 0 0 20px gold;
+  border: 2px solid white;
+}
+
+@keyframes particleGlow {
+  0%, 100% { box-shadow: 0 0 15px rgba(255, 215, 0, 0.5); }
+  50% { box-shadow: 0 0 25px rgba(255, 215, 0, 1); }
+}
+
+.carousel-caption.higgs-style {
+  animation: particleGlow 3s ease-in-out infinite;
+}
+
+/* === Bannière Intrication quantique === */
+.carousel-caption.quantique-style {
+  background: rgba(0, 0, 0, 0.65); /* Fond noir semi-transparent */
+  border-left: 4px solid #00ffff; /* Cyan clair */
+  border-radius: 12px;
+  padding: 20px;
+  color: #e0ffff;
+  backdrop-filter: blur(6px);
+  text-shadow: 1px 1px 4px #000;
+}
+
+.cta-quantique {
+  background-color: #00ced1;
+  color: #000;
+  border-radius: 30px;
+  padding: 10px 25px;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(0, 206, 209, 0.4);
+}
+
+.cta-quantique:hover {
+  background-color: #20e0e0;
+  box-shadow: 0 0 20px #00ffff;
+  border: 2px solid white;
+}
+
+@keyframes quantumFlicker {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  45%, 55% { opacity: 0.9; transform: scale(1.01); }
+  50% { opacity: 0.7; transform: scale(1.02); }
+}
+
+.carousel-caption.quantique-style {
+  animation: quantumFlicker 3.5s ease-in-out infinite;
+}
+
+/* === Responsive === */
+
+@media screen and (max-width: 840px) {
+  .other {
+    width: 80%;
+    margin: auto;
+  }
+
+  .caroussel-item.active,
+  .carousel-item img {
+    width: 90%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 768px){
+  #carouselExampleRide {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  p, h1, h2, h3, h4, h5, h6 {
+    font-size: 2em;
+  }
+
+  header a {
+    font-size: 1.8em;
+    padding: 0 10px;
+  }
+}
+
+/* === modifications annexes === */
+.carousel-control-prev,
+.carousel-control-next {
+  background: none !important; /* Enlève tout fond de base */
+  outline: none;
+  box-shadow: none;
+  transition: none !important;
+}
+
+.carousel-control-prev:focus,
+.carousel-control-next:focus,
+.carousel-control-prev:active,
+.carousel-control-next:active {
+  background: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
