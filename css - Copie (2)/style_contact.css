@@ -587,9 +587,38 @@ video, audio {
     font-size: 2em;
   }
 
-  header a {
-    font-size: 1.8em;
-    padding: 0 10px;
+   /* Agrandir légèrement la navbar */
+  .navbar {
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    font-size: 1.1rem;
+  }
+
+  /* Empile les colonnes verticalement */
+  .row {
+    flex-direction: column !important;
+  }
+
+  /* La colonne avec la carte */
+  .col-md-6:first-child {
+    order: 2; /* on place la carte APRÈS le formulaire */
+    margin-top: 5rem;
+    margin-left: 14rem;
+  }
+
+  /* La colonne avec le formulaire */
+  .col-md-6:last-child {
+    order: 1;
+  }
+
+  /* Ajoute des marges internes */
+  .col-md-6 {
+    padding: 0 1rem;
+  }
+
+  footer{
+    position : fixed;
+    bottom : 0;
   }
 }
 
