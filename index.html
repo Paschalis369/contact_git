@@ -8,23 +8,54 @@
 </head>
 <body>
   <header>
-    <a href="https://paschalis369.github.io/acceuil_1/"><img src="img/logo.png" alt="Logo du projet" class="logo"></a>
-    <nav>
-      <ul>
-        <li><a href="https://paschalis369.github.io/acceuil_1/">Accueil</a></li>
-        <li><a href="https://paschalis369.github.io/-quipe_git/">Qui sommes-nous ?</a></li>
-        <li><a href="https://paschalis369.github.io/contact_git/">Contact</a></li>
-      </ul>
-    </nav>
+    <nav class="navbar bg-primary" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="file:///C:/xampp/htdocs/Projet1/Acceuil/index.html">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="file:///C:/xampp/htdocs/Projet1/Acceuil/index.html">Acceuil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link dropdown-toggle" href="file:///C:/xampp/htdocs/Projet1/%C3%A9quipe/index.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Qui sommes-nous ?</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="file:///C:/xampp/htdocs/Projet1/%C3%A9quipe/index.html">Présentation et CV</a></li>
+                  <li><a class="dropdown-item" href="file:///C:/xampp/htdocs/Projet1/CV/index.html">CV</a></li>
+                  <li><a class="dropdown-item" href="#">Informations tiers</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link active" href="file:///C:/xampp/htdocs/Projet1/contact/index.html">
+                  Contact
+                </a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
   </header>
 
   <div class="container mt-5">
     <div class="row">
       <div class="col-6">
-
+        <div class="card" style="width: 500px; height: 500px;">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241.15836869874107!2d-17.468579961771667!3d14.738924136957873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec10d6065fe6e2d%3A0xa0864af964a09da!2sEPF%20Africa%2C%20Engineering%20School!5e0!3m2!1sfr!2ssn!4v1747308002922!5m2!1sfr!2ssn" width="500" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+            <a href="https://maps.app.goo.gl/Bibfym9q28YSK2ZNA" class="btn btn-primary" style="margin-top: 50px;">Go somewhere</a>
+          </div>
+        </div>
       </div>
       <div class="col-6">
-        <div class="contact">
+        <div class="contact" style="width: 500px; height: 500px; margin-top: 0%;">
           <h1>Contactez-nous</h1>
           <form action="#" method="post">
             <label for="prenom">Prénom :</label>
@@ -37,7 +68,7 @@
             <input type="email" id="email" name="email" required>
 
             <label for="message">Message :</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+            <textarea id="message" name="message" rows="1" required></textarea>
 
             <button type="submit">Envoyer</button>
           </form>
@@ -45,6 +76,9 @@
       </div>
     </div>
   </div>
+
+  <script src="js - Copie (2)/bootstrap.bundle.min.js"></script>
+
   <footer>
     <p>&copy; 2025 Mon Projet. Tous droits réservés.</p>
   </footer>
