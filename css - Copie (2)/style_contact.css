@@ -85,12 +85,13 @@ nav ul li a:hover {
 }
 
 footer {
-  background-color: #1E1E1E;
-  color: #bbbbbb;
-  padding: 1rem;
+  background-color: #004d99;
+  color: white;
   text-align: center;
-  font-size: 0.9rem;
-  border-top: 1px solid #303030;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
 form {
