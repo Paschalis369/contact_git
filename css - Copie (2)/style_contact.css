@@ -85,13 +85,12 @@ nav ul li a:hover {
 }
 
 footer {
-  background-color: #004d99;
-  color: white;
+  background-color: #1E1E1E;
+  color: #bbbbbb;
+  padding: 1rem;
   text-align: center;
-  padding: 10px 0;
-  position: relative;
-  bottom: 0;
-  width: 100%;
+  font-size: 0.9rem;
+  border-top: 1px solid #303030;
 }
 
 form {
@@ -638,4 +637,15 @@ video, audio {
   background: none !important;
   outline: none !important;
   box-shadow: none !important;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #303030;
+}
+
+.navbar-brand {
+  color: #ffae00 !important;
+  font-weight: bold;
 }
